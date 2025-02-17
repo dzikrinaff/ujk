@@ -24,7 +24,7 @@ Route::post('/register', [RegisterController::class, 'authenticate'])->name('reg
 // Route::post('/register', [RegisterController::class, 'register'])->name('register');
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Route::get('/admin', function () {

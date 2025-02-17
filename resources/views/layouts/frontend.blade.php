@@ -12,21 +12,21 @@
   <!-- Mobile Specific Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- Favicons - Place favicon.ico in the root directory -->
-  <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicons/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicons/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicons/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicons/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicons/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicons/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicons/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicons/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="{{asset('frontend/assets/img/favicons/apple-icon-57x57.png')}}">
+  <link rel="apple-touch-icon" sizes="60x60" href="{{asset('frontend/assets/img/favicons/apple-icon-60x60.png')}}">
+  <link rel="apple-touch-icon" sizes="72x72" href="{{asset('frontend/assets/img/favicons/apple-icon-72x72.png')}}">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{asset('frontend/assets/img/favicons/apple-icon-76x76.png')}}">
+  <link rel="apple-touch-icon" sizes="114x114" href="{{asset('frontend/assets/img/favicons/apple-icon-114x114.png')}}">
+  <link rel="apple-touch-icon" sizes="120x120" href="{{asset('frontend/assets/img/favicons/apple-icon-120x120.png')}}">
+  <link rel="apple-touch-icon" sizes="144x144" href="{{asset('frontend/assets/img/favicons/apple-icon-144x144.png')}}">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{asset('frontend/assets/img/favicons/apple-icon-152x152.png')}}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{asset('frontend/assets/img/favicons/apple-icon-180x180.png')}}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{asset('frontend/assets/img/favicons/favicon-32x32.png')}}">
+  <link rel="icon" type="image/png" sizes="96x96" href="{{asset('frontend/assets/img/favicons/favicon-96x96.png')}}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{asset('frontend/assets/img/favicons/favicon-16x16.png')}}">
   <link rel="manifest" href="assets/img/favicons/manifest.json">
   <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png">
+  <meta name="msapplication-TileImage" content="{{asset('frontend/assets/img/favicons/ms-icon-144x144.png')}}">
   <meta name="theme-color" content="#ffffff">
   <!--==============================
 	  Google Fonts
@@ -38,19 +38,19 @@
 	    All CSS File
 	============================== -->
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{asset('frontend/assets/css/bootstrap.min.css')}}">
   <!-- Fontawesome Icon -->
-  <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+  <link rel="stylesheet" href="{{asset('frontend/assets/css/fontawesome.min.css')}}">
   <!-- Magnific Popup -->
-  <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+  <link rel="stylesheet" href="{{asset('frontend/assets/css/magnific-popup.min.css')}}">
   <!-- Slick Slider -->
-  <link rel="stylesheet" href="assets/css/slick.min.css">
+  <link rel="stylesheet" href="{{asset('frontend/assets/css/slick.min.css')}}">
   <!-- Animation CSS -->
-  <link rel="stylesheet" href="assets/css/animate.min.css">
+  <link rel="stylesheet" href="{{asset('frontend/assets/css/animate.min.css')}}">
   <!-- Custom Cursor CSS -->
-  <link rel="stylesheet" href="assets/css/custom-cursor.min.css">
+  <link rel="stylesheet" href="{{asset('frontend/assets/css/custom-cursor.min.css')}}">
   <!-- Theme Custom CSS -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="{{asset('frontend/assets/css/style.css')}}">
 </head>
 
 <body id="body" class="vs-page">
@@ -66,7 +66,7 @@
   <div class="preloader">
     <button class="vs-btn preloaderCls">Cancel Preloader </button>
     <div class="preloader-inner">
-      <img src="assets/img/logo.svg" alt="logo">
+      <img src="{{asset('frontend/assets/img/logo.svg')}}" alt="logo">
       <span class="loader"></span>
     </div>
   </div>
@@ -76,7 +76,7 @@
   <div class="vs-menu-wrapper">
     <div class="vs-menu-area text-center">
       <div class="mobile-logo">
-        <a href="index.html"><img src="assets/img/logo.svg" alt="roda" class="logo"></a>
+        <a href="index.html"><img src="{{asset('frontend/assets/img/logo.svg')}}" alt="roda" class="logo"></a>
         <button class="vs-menu-toggle">
           <i class="fa-solid fa-xmark"></i>
         </button>
@@ -108,7 +108,7 @@
       <div class="vs-mobile-menu">
         <ul>
           <li class="menu-item-has-children">
-            <a class="vs-svg-assets" data-svg-assets="assets/img/svg/svg-menu-bottom-line.svg" href="index.html">HOME</a>
+            <a class="vs-svg-assets" data-svg-assets="{{asset('frontend/assets/img/svg/svg-menu-bottom-line.svg')}}" href="index.html">HOME</a>
             <ul class="sub-menu">
               <li><a href="index.html">Home 01</a></li>
               <li><a href="index-2.html">Home 02</a></li>
@@ -116,10 +116,10 @@
             </ul>
           </li>
           <li>
-            <a class="vs-svg-assets" data-svg-assets="assets/img/svg/svg-menu-bottom-line.svg" href="about.html">About</a>
+            <a class="vs-svg-assets" data-svg-assets="{{asset('frontend/assets/img/svg/svg-menu-bottom-line.svg')}}" href="about.html">About</a>
           </li>
           <li class="menu-item-has-children mega-menu-wrap">
-            <a class="vs-svg-assets" data-svg-assets="assets/img/svg/svg-menu-bottom-line.svg" href="javascript:void(0)">Pages</a>
+            <a class="vs-svg-assets" data-svg-assets="{{asset('frontend/assets/img/svg/svg-menu-bottom-line.svg')}}" href="javascript:void(0)">Pages</a>
             <ul class="mega-menu">
               <li><a href="javascript:void(0)">Page List 1</a>
                 <ul>
@@ -163,7 +163,7 @@
             </ul>
           </li>
           <li class="menu-item-has-children">
-            <a class="vs-svg-assets" data-svg-assets="assets/img/svg/svg-menu-bottom-line.svg" href="shop.html">shop</a>
+            <a class="vs-svg-assets" data-svg-assets="{{asset('frontend/assets/img/svg/svg-menu-bottom-line.svg')}}" href="shop.html">shop</a>
             <ul class="sub-menu">
               <li><a href="shop.html">Main Shop</a></li>
               <li><a href="shop-details.html">Shop Details</a></li>
@@ -172,14 +172,14 @@
             </ul>
           </li>
           <li class="menu-item-has-children">
-            <a class="vs-svg-assets" data-svg-assets="assets/img/svg/svg-menu-bottom-line.svg" href="blog.html">blog</a>
+            <a class="vs-svg-assets" data-svg-assets="{{asset('frontend/assets/img/svg/svg-menu-bottom-line.svg')}}" href="blog.html">blog</a>
             <ul class="sub-menu">
               <li><a href="blog.html">Blog</a></li>
               <li><a href="blog-details.html">Blog Details</a></li>
             </ul>
           </li>
           <li>
-            <a class="vs-svg-assets" data-svg-assets="assets/img/svg/svg-menu-bottom-line.svg" href="contact.html">contact</a>
+            <a class="vs-svg-assets" data-svg-assets="{{asset('frontend/assets/img/svg/svg-menu-bottom-line.svg')}}" href="contact.html">contact</a>
           </li>
         </ul>
       </div>
@@ -226,7 +226,7 @@
   <div class="sidemenu-wrapper">
     <div class="sidemenu-content">
       <div class="sidemenu-logo sidemenu-item">
-        <a href="index.html"><img src="assets/img/logo-black.svg" alt="Roda" class="logo"></a>
+        <a href="index.html"><img src="{{asset('frontend/assets/img/logo-black.svg')}}" alt="Roda" class="logo"></a>
         <button class="closeButton sideMenuCls">X</button>
       </div>
       <hr class="sidemenu-hr sidemenu-item">
@@ -287,7 +287,7 @@
     </form>
   </div>
   <!--==============================
-    Cart Sidebar
+    Cart 
 ===============================-->
   <div class="sideCart-wrapper">
     <div class="cart-sidebar-content">
@@ -301,7 +301,7 @@
         <div class="shopping-cart-content">
           <div class="cart-items">
             <div class="cart-item cart-animation-item">
-              <img class="cart-item__image" src="assets/img/nft/nft-shop-sidebar-1-1.jpg" alt="Premium Headphones">
+              <img class="cart-item__image" src="{{asset('frontend/assets/img/nft/nft-shop-sidebar-1-1.jpg')}}" alt="Premium Headphones">
               <div class="item-details">
                 <h3><a href="shop-nft.html">NFT Game</a></h3>
                 <div class="item-controls">
@@ -327,7 +327,7 @@
               </button>
             </div>
             <div class="cart-item cart-animation-item">
-              <img class="cart-item__image" src="assets/img/products/side-product-1-2.png" alt="Premium Headphones">
+              <img class="cart-item__image" src="{{asset('frontend/assets/img/products/side-product-1-2.png')}}" alt="Premium Headphones">
               <div class="item-details">
                 <h3><a href="shop-nft.html">Game Controller</a></h3>
                 <div class="item-controls">
@@ -353,7 +353,7 @@
               </button>
             </div>
             <div class="cart-item cart-animation-item">
-              <img class="cart-item__image" src="assets/img/nft/nft-shop-sidebar-1-2.jpg" alt="Premium Headphones">
+              <img class="cart-item__image" src="{{asset('frontend/assets/img/nft/nft-shop-sidebar-1-2.jpg')}}" alt="Premium Headphones">
               <div class="item-details">
                 <h3><a href="shop-nft.html">NFT Game Two</a></h3>
                 <div class="item-controls">
@@ -413,7 +413,7 @@
             <div class="col-xl-auto col-lg-auto col-md-auto col-auto">
               <div class="vs-header__logo">
                 <a class="vs-header__logo-link" href="/">
-                  <img src="assets/img/logo.svg" alt="Roda Logo - Gaming HTML5 Template" loading="lazy" width="185" height="55">
+                  <img src="{{asset('frontend/assets/img/logo.svg')}}" alt="Roda Logo - Gaming HTML5 Template" loading="lazy" width="185" height="55">
                 </a>
               </div>
             </div>
@@ -421,7 +421,7 @@
               <nav class="main-menu d-none d-lg-block">
                 <ul>
                   <li class="menu-item-has-children">
-                    <a class="vs-svg-assets" data-svg-assets="assets/img/svg/svg-menu-bottom-line.svg" href="index.html">HOME</a>
+                    <a class="vs-svg-assets" data-svg-assets="{{asset('frontend/assets/img/svg/svg-menu-bottom-line.svg')}}" href="index.html">HOME</a>
                     <ul class="sub-menu">
                       <li><a href="index.html">Home 01</a></li>
                       <li><a href="index-2.html">Home 02</a></li>
@@ -429,10 +429,10 @@
                     </ul>
                   </li>
                   <li>
-                    <a class="vs-svg-assets" data-svg-assets="assets/img/svg/svg-menu-bottom-line.svg" href="about.html">About</a>
+                    <a class="vs-svg-assets" data-svg-assets="{{asset('frontend/assets/img/svg/svg-menu-bottom-line.svg')}}" href="about.html">About</a>
                   </li>
                   <li class="menu-item-has-children mega-menu-wrap">
-                    <a class="vs-svg-assets" data-svg-assets="assets/img/svg/svg-menu-bottom-line.svg" href="javascript:void(0)">Pages</a>
+                    <a class="vs-svg-assets" data-svg-assets="{{asset('frotend/assets/img/svg/svg-menu-bottom-line.svg')}}" href="javascript:void(0)">Pages</a>
                     <ul class="mega-menu">
                       <li><a href="javascript:void(0)">Page List 1</a>
                         <ul>
@@ -476,7 +476,7 @@
                     </ul>
                   </li>
                   <li class="menu-item-has-children">
-                    <a class="vs-svg-assets" data-svg-assets="assets/img/svg/svg-menu-bottom-line.svg" href="shop.html">shop</a>
+                    <a class="vs-svg-assets" data-svg-assets="{{asset('frontend/assets/img/svg/svg-menu-bottom-line.svg')}}" href="shop.html">shop</a>
                     <ul class="sub-menu">
                       <li><a href="shop.html">Main Shop</a></li>
                       <li><a href="shop-details.html">Shop Details</a></li>
@@ -485,14 +485,14 @@
                     </ul>
                   </li>
                   <li class="menu-item-has-children">
-                    <a class="vs-svg-assets" data-svg-assets="assets/img/svg/svg-menu-bottom-line.svg" href="blog.html">blog</a>
+                    <a class="vs-svg-assets" data-svg-assets="{{asset('frontend/assets/img/svg/svg-menu-bottom-line.svg')}}" href="blog.html">blog</a>
                     <ul class="sub-menu">
                       <li><a href="blog.html">Blog</a></li>
                       <li><a href="blog-details.html">Blog Details</a></li>
                     </ul>
                   </li>
                   <li>
-                    <a class="vs-svg-assets" data-svg-assets="assets/img/svg/svg-menu-bottom-line.svg" href="contact.html">contact</a>
+                    <a class="vs-svg-assets" data-svg-assets="{{asset('frontend/assets/img/svg/svg-menu-bottom-line.svg')}}" href="contact.html">contact</a>
                   </li>
                 </ul>
               </nav>
@@ -540,11 +540,11 @@
       <section class="vs-hero vs-hero--style2 z-index-common wow animate__fadeInUp" data-wow-delay="0.25s" aria-hidden="true">
         <div class="vs-carousel" data-fade="true">
           <div class="slick-slide" aria-hidden="true">
-            <div class="vs-hero__item" data-bg-src="assets/img/bg/h1-hero-2-1.png">
-              <img src="assets/img/hero/hero-img-2-1.png" alt="hero element" class="hero-ele1">
-              <img src="assets/img/hero/hero-img-2-2.png" alt="hero element" class="hero-ele2">
-              <img src="assets/img/hero/hero-img-2-3.png" alt="hero element" class="hero-ele3">
-              <img src="assets/img/hero/hero-img-2-4.png" alt="hero element" class="hero-ele4">
+            <div class="vs-hero__item" data-bg-src="{{asset('frontend/assets/img/bg/h1-hero-2-1.png')}}">
+              <img src="{{asset('frontend/assets/img/hero/hero-img-2-1.png')}}" alt="hero element" class="hero-ele1">
+              <img src="{{asset('frontend/assets/img/hero/hero-img-2-2.png')}}" alt="hero element" class="hero-ele2">
+              <img src="{{asset('frontend/assets/img/hero/hero-img-2-3.png')}}" alt="hero element" class="hero-ele3">
+              <img src="{{asset('frontend/assets/img/hero/hero-img-2-4.png')}}" alt="hero element" class="hero-ele4">
               <div class="container">
                 <div class="row align-items-center gy-4">
                   <div class="col-lg-7">
@@ -563,7 +563,7 @@
                         <span>final king</span>
                       </div>
                       <h1 class="vs-hero__title"><span class="vs-hero__title--highlight">nft games</span>
-                        is king <img class="vs-hero__title--img" src="assets/img/hero/hero-img-2-5.png" alt="roda">
+                        is king <img class="vs-hero__title--img" src="{{asset('frontend/assets/img/hero/hero-img-2-5.png')}}" alt="roda">
                       </h1>
                       <h3 class="vs-hero__text">roda has the best pro <span>players</span></h3>
                       <div class="vs-hero__buttons" aria-hidden="true">
@@ -599,7 +599,7 @@
                   </div>
                   <div class="col-lg-5">
                     <div class="vs-hero__image">
-                      <img src="assets/img/hero/hero-img-2-0.png" alt="Hero Image">
+                      <img src="{{asset('frontend/assets/img/hero/hero-img-2-0.png')}}" alt="Hero Image">
                     </div>
                   </div>
                 </div>
@@ -616,28 +616,28 @@
       <!-- Hero Area End -->
       <!-- Twin Section -->
       <section class="twin-section space space-extra-bottom bg-color1 z-index-common overflow-hidden" data-bg-src="assets/img/bg/twin-section-bg-3.png">
-        <img src="assets/img/elements/twin-ele-1.png" alt="twin-ele" class="twin-ele twin-ele--style1">
+        <img src="{{asset('frontend/assets/img/elements/twin-ele-1.png')}}" alt="twin-ele" class="twin-ele twin-ele--style1">
         <div class="sponsor">
           <div class="container text-center">
             <h2 class="sponsor__title wow animate__fadeInUp" data-wow-delay="0.25s">
               Leading Nft Game Investors <span>And Founders</span>
-              <img src="assets/img/svg/svg-section-icon.svg" alt="svg section icon">
+              <img src="{{asset('frontend/assets/img/svg/svg-section-icon.svg')}}" alt="svg section icon">
             </h2>
             <div class="vs-carousel" data-slide-show="4" data-md-slide-show="3" data-sm-slide-show="3" data-xs-slide-show="1">
               <div class="sponsor__item wow animate__fadeInUp" data-wow-delay="0.35s">
-                <img src="assets/img/brand/brand-2-1.png" alt="Brand">
+                <img src="{{asset('frontend/assets/img/brand/brand-2-1.png')}}" alt="Brand">
               </div>
               <div class="sponsor__item wow animate__fadeInUp" data-wow-delay="0.45s">
-                <img src="assets/img/brand/brand-2-2.png" alt="Brand">
+                <img src="{{asset('frontend/assets/img/brand/brand-2-2.png')}}" alt="Brand">
               </div>
               <div class="sponsor__item wow animate__fadeInUp" data-wow-delay="0.55s">
-                <img src="assets/img/brand/brand-2-3.png" alt="Brand">
+                <img src="{{asset('frontend/assets/img/brand/brand-2-3.png')}}" alt="Brand">
               </div>
               <div class="sponsor__item wow animate__fadeInUp" data-wow-delay="0.65s">
-                <img src="assets/img/brand/brand-2-4.png" alt="Brand">
+                <img src="{{asset('frontend/assets/img/brand/brand-2-4.png')}}" alt="Brand">
               </div>
               <div class="sponsor__item wow animate__fadeInUp" data-wow-delay="0.75s">
-                <img src="assets/img/brand/brand-2-1.png" alt="Brand">
+                <img src="{{asset('frontend/assets/img/brand/brand-2-1.png')}}" alt="Brand">
               </div>
             </div>
           </div>
@@ -648,18 +648,18 @@
             <div class="col-lg-6 mb-30 wow animate__fadeInUp" data-wow-delay="0.25s">
               <div class="tab-content vs-tab-content" id="nav-tabContent-left">
                 <div class="tab-pane vs-tab-pane fade" id="nav-home-left" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
-                  <div class="team-details__img-container" data-bg-src="assets/img/svg/svg-square.svg">
-                    <img class="team-details__img" src="assets/img/team/team-details-1.jpg" alt="Team Details">
+                  <div class="team-details__img-container" data-bg-src="{{asset('frontend/assets/img/svg/svg-square.svg')}}">
+                    <img class="team-details__img" src="{{asset('frontend/assets/img/team/team-details-1.jpg')}}" alt="Team Details">
                   </div>
                 </div>
                 <div class="tab-pane vs-tab-pane fade" id="nav-profile-left" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
-                  <div class="team-details__img-container" data-bg-src="assets/img/svg/svg-square.svg">
-                    <img class="team-details__img" src="assets/img/team/team-details-2.jpg" alt="Team Details">
+                  <div class="team-details__img-container" data-bg-src="{{asset('frontend/assets/img/svg/svg-square.svg')}}">
+                    <img class="team-details__img" src="{{asset('frontend/assets/img/team/team-details-2.jpg')}}" alt="Team Details">
                   </div>
                 </div>
                 <div class="tab-pane vs-tab-pane fade show active" id="nav-contact-left" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
-                  <div class="team-details__img-container" data-bg-src="assets/img/svg/svg-square.svg">
-                    <img class="team-details__img" src="assets/img/team/team-details-3.jpg" alt="Team Details">
+                  <div class="team-details__img-container" data-bg-src="{{asset('frontend/assets/img/svg/svg-square.svg')}}">
+                    <img class="team-details__img" src="{{asset('frontend/assets/img/team/team-details-3.jpg')}}" alt="Team Details">
                   </div>
                 </div>
               </div>
@@ -669,7 +669,7 @@
               <div class="team-details__tab">
                 <nav class="team-details__nav">
                   <div class="team-details__nav-logo">
-                    <img src="assets/img/team/team-tab-logo.png" alt="Roda Team Details">
+                    <img src="{{asset('frontend/assets/img/team/team-tab-logo.png')}}" alt="Roda Team Details">
                   </div>
                   <div class="nav nav-tabs" id="nav-tab" role="tablist">
                     <button class="nav-link vs-nav-link" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home-left, #nav-home-right" type="button" role="tab" aria-controls="nav-home-left" aria-selected="true">DEUTER</button>
@@ -768,7 +768,7 @@
       </section>
       <!-- Twin Section End -->
       <!-- Twin Section -->
-      <section class="twin-section--style2 space overflow-hidden" data-bg-src="assets/img/bg/twin-section-bg-2.png">
+        <section class="twin-section--style2 space overflow-hidden" data-bg-src="{{asset('frontend/assets/img/bg/twin-section-bg-2.png')}}">
         <div class="about">
           <div class="container">
             <div class="row align-items-center">
@@ -783,12 +783,12 @@
                                 </svg>
                             </span>
                   <h2 class="title-style__big title-anime__title">
-                    <img src="assets/img/svg/svg-section-icon.svg" alt="svg section icon">
+                    <img src="{{asset('frontend/assets/img/svg/svg-section-icon.svg')}}" alt="svg section icon">
                     Best <span>Blockchain</span>
                     Game List
                   </h2>
                   <p class="about__text">
-                    <img src="assets/img/svg/svg-flag-icon.svg" alt="svg-flag-icon" class="about__text--icon">
+                    <img src="{{asset('frontend/assets/img/svg/svg-flag-icon.svg')}}" alt="svg-flag-icon" class="about__text--icon">
                     Top Play To Earn Tokens <span>by Market</span>
                   </p>
                   <a href="#" class="vs-btn vs-btn--style2" tabindex="-1">
@@ -817,7 +817,7 @@
               </div>
               <div class="col-lg-7 mb-30 wow animate__fadeInUp" data-wow-delay="0.45s">
                 <div class="about__img">
-                  <img src="assets/img/about/about-right.png" alt="about right">
+                  <img src="{{asset('frontend/assets/img/about/about-right.png')}}" alt="about right">
                 </div>
               </div>
             </div>
@@ -828,7 +828,7 @@
             <div class="row">
               <div class="col-lg-4 wow animate__fadeInUp" data-wow-delay="0.25s">
                 <div class="creator-item creator-item--style2">
-                  <div class="creator-item__bg" data-bg-src="assets/img/svg/svg-feature-item-bg.svg"></div>
+                  <div class="creator-item__bg" data-bg-src="{{asset('frontend/assets/img/svg/svg-feature-item-bg.svg')}}"></div>
                   <div class="creator-item__icon">
                     <svg class="creator-item__icon--img" width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M23.5001 1.95831C18.337 1.9359 13.3758 3.96211 9.70461 7.59256C6.03341 11.223 3.95195 16.1613 3.91673 21.3243C3.91557 24.0723 4.50513 26.7886 5.64548 29.2889C6.78582 31.7892 8.45029 34.0151 10.5261 35.8159V38.728C10.5344 40.4087 11.2092 42.0175 12.4025 43.2013C13.5957 44.385 15.2099 45.0469 16.8907 45.0416H30.1094C31.7899 45.0469 33.4038 44.3852 34.597 43.2019C35.7902 42.0187 36.4652 40.4104 36.474 38.7299V35.8179C38.5501 34.0169 40.2147 31.7906 41.3551 29.2899C42.4954 26.7893 43.0848 24.0727 43.0834 21.3243C43.0482 16.1613 40.9667 11.223 37.2955 7.59256C33.6243 3.96211 28.6631 1.9359 23.5001 1.95831ZM33.2917 33.3641C33.0603 33.5475 32.8733 33.7809 32.7447 34.0467C32.6162 34.3126 32.5495 34.6041 32.5495 34.8994V38.7299C32.5413 39.3704 32.2801 39.9816 31.823 40.4303C31.3659 40.8789 30.7499 41.1287 30.1094 41.125H29.3751V35.25C29.3751 34.7306 29.1687 34.2325 28.8015 33.8652C28.4342 33.498 27.9361 33.2916 27.4167 33.2916C26.8974 33.2916 26.3992 33.498 26.032 33.8652C25.6647 34.2325 25.4584 34.7306 25.4584 35.25V41.125H21.5417V35.25C21.5417 34.7306 21.3354 34.2325 20.9682 33.8652C20.6009 33.498 20.1028 33.2916 19.5834 33.2916C19.064 33.2916 18.5659 33.498 18.1987 33.8652C17.8314 34.2325 17.6251 34.7306 17.6251 35.25V41.125H16.8907C16.2488 41.1307 15.6309 40.8819 15.1721 40.433C14.7133 39.9841 14.451 39.3718 14.4428 38.7299V34.8994C14.4438 34.6048 14.3782 34.3137 14.2511 34.0478C14.1239 33.782 13.9384 33.5483 13.7084 33.3641C11.8801 31.9343 10.401 30.1073 9.38315 28.0214C8.36529 25.9354 7.83534 23.6453 7.8334 21.3243C7.8334 17.1692 9.48399 13.1843 12.4221 10.2463C15.3601 7.3082 19.345 5.65761 23.5001 5.65761C27.6551 5.65761 31.64 7.3082 34.5781 10.2463C37.5161 13.1843 39.1667 17.1692 39.1667 21.3243C39.1648 23.6453 38.6348 25.9354 37.617 28.0214C36.5991 30.1073 35.1201 31.9343 33.2917 33.3641Z" fill="#A6D719" />
@@ -847,7 +847,7 @@
               </div>
               <div class="col-lg-4 wow animate__fadeInUp" data-wow-delay="0.45s">
                 <div class="creator-item creator-item--style2">
-                  <div class="creator-item__bg" data-bg-src="assets/img/svg/svg-feature-item-bg.svg"></div>
+                  <div class="creator-item__bg" data-bg-src="{{asset('frontend/assets/img/svg/svg-feature-item-bg.svg')}}"></div>
                   <div class="creator-item__icon">
                     <svg width="48" height="34" viewBox="0 0 48 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M45.5626 12.9938C44.3813 5.56875 37.9688 0 30.5438 0H16.8751C9.28131 0 2.86881 5.56875 1.68756 12.9938C0.506311 20.925 6.10352e-05 24.4688 6.10352e-05 25.8188C6.10352e-05 34.0875 11.3063 36.7875 15.0188 29.3625L17.8876 23.625H29.3626L32.2313 29.3625C35.9438 36.7875 47.2501 34.0875 47.2501 25.8188C47.2501 24.6375 47.2501 26.1563 45.5626 12.9938ZM43.8751 25.8188C43.8751 30.5438 37.2938 32.2313 35.2688 27.8438L31.8938 21.0938C31.5563 20.5875 31.0501 20.25 30.3751 20.25H16.8751C16.2001 20.25 15.6938 20.5875 15.3563 21.2625L11.9813 28.0125C9.95631 32.2313 3.37506 30.5438 3.37506 25.8188L5.06256 13.5C5.90631 7.7625 10.9688 3.375 16.7063 3.375H30.3751C36.2813 3.375 41.1751 7.7625 42.0188 13.5C42.1876 13.6688 44.0438 26.6625 43.8751 25.8188Z" fill="#A6D719" />
@@ -869,7 +869,7 @@
               </div>
               <div class="col-lg-4 wow animate__fadeInUp" data-wow-delay="0.65s">
                 <div class="creator-item creator-item--style2">
-                  <div class="creator-item__bg" data-bg-src="assets/img/svg/svg-feature-item-bg.svg"></div>
+                  <div class="creator-item__bg" data-bg-src="{{asset('frontend/assets/img/svg/svg-feature-item-bg.svg')}}"></div>
                   <div class="creator-item__icon">
                     <svg width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M39.6563 16.1061H34.9603C33.8358 16.1061 32.7658 16.5292 31.9475 17.2966L28.7569 20.2843C27.8712 21.1147 27.3634 22.2866 27.3634 23.5C27.3634 24.7135 27.8712 25.8853 28.7576 26.7158L31.9475 29.7035C32.7658 30.4709 33.8358 30.894 34.9603 30.894H39.6563C42.086 30.894 44.0625 28.9175 44.0625 26.4877V20.5123C44.0625 18.0826 42.086 16.1061 39.6563 16.1061ZM41.125 26.4877C41.125 27.2981 40.466 27.9565 39.6563 27.9565H34.9603C34.5852 27.9565 34.2288 27.8159 33.9563 27.5606L30.7663 24.5729C30.4659 24.2918 30.3009 23.9102 30.3009 23.5C30.3009 23.0898 30.4659 22.7083 30.7656 22.4272L33.9563 19.4395C34.2281 19.1841 34.5852 19.0436 34.9603 19.0436H39.6563C40.466 19.0436 41.125 19.7019 41.125 20.5123V26.4877Z" fill="#A6D719" />
@@ -892,26 +892,26 @@
         </div>
         <div class="image-gallery">
           <div class="image-gallery__col image-gallery__one wow animate__fadeInUp" data-wow-delay="0.25s">
-            <img src="assets/img/gallery/gallery-img-1.jpg" alt="image gallery">
-            <a href="assets/img/gallery/gallery-img-1.jpg" class="image-gallery__col--popup popup-image">
+            <img src="{{asset('frontend/assets/img/gallery/gallery-img-1.jpg')}}" alt="image gallery">
+            <a href="{{asset('frontend/assets/img/gallery/gallery-img-1.jpg')}}" class="image-gallery__col--popup popup-image">
               <i class="fa-solid fa-plus"></i>
             </a>
           </div>
           <div class="image-gallery__col image-gallery__two wow animate__fadeInUp" data-wow-delay="0.45s">
-            <img src="assets/img/gallery/gallery-img-2.jpg" alt="image gallery">
-            <a href="assets/img/gallery/gallery-img-2.jpg" class="image-gallery__col--popup popup-image">
+            <img src="{{asset('frontend/assets/img/gallery/gallery-img-2.jpg')}}" alt="image gallery">
+            <a href="{{asset('frontend/assets/img/gallery/gallery-img-2.jpg')}}" class="image-gallery__col--popup popup-image">
               <i class="fa-solid fa-plus"></i>
             </a>
           </div>
           <div class="image-gallery__col image-gallery__three wow animate__fadeInUp" data-wow-delay="0.65s">
-            <img src="assets/img/gallery/gallery-img-3.jpg" alt="image gallery">
-            <a href="assets/img/gallery/gallery-img-3.jpg" class="image-gallery__col--popup popup-image">
+            <img src="{{asset('frontend/assets/img/gallery/gallery-img-3.jpg')}}" alt="image gallery">
+            <a href="{{asset('frontend/assets/img/gallery/gallery-img-3.jpg')}}" class="image-gallery__col--popup popup-image">
               <i class="fa-solid fa-plus"></i>
             </a>
           </div>
           <div class="image-gallery__col image-gallery__four wow animate__fadeInUp" data-wow-delay="0.85s">
-            <img src="assets/img/gallery/gallery-img-4.jpg" alt="image gallery">
-            <a href="assets/img/gallery/gallery-img-4.jpg" class="image-gallery__col--popup popup-image">
+            <img src="{{asset('frontend/assets/img/gallery/gallery-img-4.jpg')}}" alt="image gallery">
+            <a href="{{asset('frontend/assets/img/gallery/gallery-img-4.jpg')}}" class="image-gallery__col--popup popup-image">
               <i class="fa-solid fa-plus"></i>
             </a>
           </div>
@@ -920,7 +920,7 @@
       <!-- Twin Section End -->
       <!-- Game Open Registration -->
       <section class="game space space-extra-bottom z-index-common">
-        <div class="game__bg--image" data-bg-src="assets/img/bg/game-bg-1-1.png"></div>
+        <div class="game__bg--image" data-bg-src="{{asset('frontend/assets/img/bg/game-bg-1-1.png')}}"></div>
         <div class="game__bg--color"></div>
         <div class="container">
           <div class="row justify-content-center">
@@ -941,7 +941,7 @@
               <div class="game-card game-card--style2">
                 <div class="game-card__content">
                   <div class="game-card__image">
-                    <img src="assets/img/game/game-icon-2-1.png" alt="Game Thumbnail" class="game-card__thumbnail">
+                    <img src="{{asset('frontend/assets/img/game/game-icon-2-1.png')}}" alt="Game Thumbnail" class="game-card__thumbnail">
                   </div>
                   <div class="game-card__details">
                     <h2 class="game-card__title">
@@ -999,7 +999,7 @@
               <div class="game-card game-card--style2">
                 <div class="game-card__content">
                   <div class="game-card__image">
-                    <img src="assets/img/game/game-icon-2-2.png" alt="Game Thumbnail" class="game-card__thumbnail">
+                    <img src="{{asset('frontend/assets/img/game/game-icon-2-2.png')}}" alt="Game Thumbnail" class="game-card__thumbnail">
                   </div>
                   <div class="game-card__details">
                     <h2 class="game-card__title">
@@ -1057,7 +1057,7 @@
               <div class="game-card game-card--style2">
                 <div class="game-card__content">
                   <div class="game-card__image">
-                    <img src="assets/img/game/game-icon-2-3.png" alt="Game Thumbnail" class="game-card__thumbnail">
+                    <img src="{{asset('frontend/assets/img/game/game-icon-2-3.png')}}" alt="Game Thumbnail" class="game-card__thumbnail">
                   </div>
                   <div class="game-card__details">
                     <h2 class="game-card__title">
@@ -1115,7 +1115,7 @@
               <div class="game-card game-card--style2">
                 <div class="game-card__content">
                   <div class="game-card__image">
-                    <img src="assets/img/game/game-icon-2-4.png" alt="Game Thumbnail" class="game-card__thumbnail">
+                    <img src="{{asset('frontend/assets/img/game/game-icon-2-4.png')}}" alt="Game Thumbnail" class="game-card__thumbnail">
                   </div>
                   <div class="game-card__details">
                     <h2 class="game-card__title">
@@ -1197,7 +1197,7 @@
       </section>
       <!-- Game Open Registration End -->
       <!-- Team Area -->
-      <section class="team-layout space space-extra-bottom" data-bg-src="assets/img/bg/team-page-layout-bg-1.png">
+      <section class="team-layout space space-extra-bottom" data-bg-src="{{asset('frontend/assets/img/bg/team-page-layout-bg-1.png')}}">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-auto wow animate__fadeInUp" data-wow-delay="0.25s">
@@ -1216,8 +1216,8 @@
             <div class="col-lg-3 col-md-6 wow animate__fadeInUp" data-wow-delay="0.25s">
               <div class="team-member team-member--style2">
                 <div class="team-member__image-container">
-                  <div class="team-member__image-bg" data-bg-src="assets/img/svg/team-svg-circle-1.svg"></div>
-                  <img src="assets/img/team/team-member-1.png" alt="sverker lind From Roda" class="team-member__image">
+                  <div class="team-member__image-bg" data-bg-src="{{asset('frontend/assets/img/svg/team-svg-circle-1.svg')}}"></div>
+                  <img src="{{asset('frontend/assets/img/team/team-member-1.png')}}" alt="sverker lind From Roda" class="team-member__image">
                 </div>
                 <div class="team-member__details">
                   <h3 class="team-member__name">
@@ -1235,8 +1235,8 @@
             <div class="col-lg-3 col-md-6 wow animate__fadeInUp" data-wow-delay="0.45s">
               <div class="team-member team-member--style2">
                 <div class="team-member__image-container">
-                  <div class="team-member__image-bg" data-bg-src="assets/img/svg/team-svg-circle-1.svg"></div>
-                  <img src="assets/img/team/team-member-2.png" alt="sverker lind From Roda" class="team-member__image">
+                  <div class="team-member__image-bg" data-bg-src="{{asset('frontend/assets/img/svg/team-svg-circle-1.svg')}}"></div>
+                  <img src="{{asset('frontend/assets/img/team/team-member-2.png')}}" alt="sverker lind From Roda" class="team-member__image">
                 </div>
                 <div class="team-member__details">
                   <h3 class="team-member__name">
@@ -1254,8 +1254,8 @@
             <div class="col-lg-3 col-md-6 wow animate__fadeInUp" data-wow-delay="0.65s">
               <div class="team-member team-member--style2">
                 <div class="team-member__image-container">
-                  <div class="team-member__image-bg" data-bg-src="assets/img/svg/team-svg-circle-1.svg"></div>
-                  <img src="assets/img/team/team-member-3.png" alt="sverker lind From Roda" class="team-member__image">
+                  <div class="team-member__image-bg" data-bg-src="{{asset('frontend/assets/img/svg/team-svg-circle-1.svg')}}"></div>
+                  <img src="{{asset('frontend/assets/img/team/team-member-3.png')}}" alt="sverker lind From Roda" class="team-member__image">
                 </div>
                 <div class="team-member__details">
                   <h3 class="team-member__name">
@@ -1273,8 +1273,8 @@
             <div class="col-lg-3 col-md-6 wow animate__fadeInUp" data-wow-delay="0.85s">
               <div class="team-member team-member--style2">
                 <div class="team-member__image-container">
-                  <div class="team-member__image-bg" data-bg-src="assets/img/svg/team-svg-circle-1.svg"></div>
-                  <img src="assets/img/team/team-member-4.png" alt="sverker lind From Roda" class="team-member__image">
+                  <div class="team-member__image-bg" data-bg-src="{{asset('frontend/assets/img/svg/team-svg-circle-1.svg')}}"></div>
+                  <img src="{{asset('frontend/assets/img/team/team-member-4.png')}}" alt="sverker lind From Roda" class="team-member__image">
                 </div>
                 <div class="team-member__details">
                   <h3 class="team-member__name">
@@ -1297,7 +1297,7 @@
       <section class="video video--layout2 z-index-common wow animate__fadeInUp" data-wow-delay="0.25s">
         <div class="video__bg z-index-common">
           <div data-vs-gsap-parallax-speed="5" data-vs-gsap-parallax-zoom>
-            <img class="video__img" src="assets/img/video/video-bg-1-2.jpg" alt="roda">
+            <img class="video__img" src="{{asset('frontend/assets/img/video/video-bg-1-2.jpg')}}" alt="roda">
           </div>
           <div class="video__content">
             <div class="container">
@@ -1360,7 +1360,7 @@
               <div class="product__item">
                 <div class="product__img">
                   <a class="product__img--link" href="shop-details.html">
-                    <img src="assets/img/products/product-1-1.png" alt="Product Image" class="product__img--main">
+                    <img src="{{asset('frontend/assets/img/products/product-1-1.png')}}" alt="Product Image" class="product__img--main">
                   </a>
                   <a class="product__wishlist" role="button" href="wishlist.html">
                     <i class="fa-sharp fa-light fa-heart"></i>
@@ -1405,7 +1405,7 @@
               <div class="product__item">
                 <div class="product__img">
                   <a class="product__img--link" href="shop-details.html">
-                    <img src="assets/img/products/product-1-2.png" alt="Product Image" class="product__img--main">
+                    <img src="{{asset('frontend/assets/img/products/product-1-2.png')}}" alt="Product Image" class="product__img--main">
                   </a>
                   <a class="product__wishlist" role="button" href="wishlist.html">
                     <i class="fa-sharp fa-light fa-heart"></i>
@@ -1450,7 +1450,7 @@
               <div class="product__item">
                 <div class="product__img">
                   <a class="product__img--link" href="shop-details.html">
-                    <img src="assets/img/products/product-1-3.png" alt="Product Image" class="product__img--main">
+                    <img src="{{asset('frontend/assets/img/products/product-1-3.png')}}" alt="Product Image" class="product__img--main">
                   </a>
                   <a class="product__wishlist" role="button" href="wishlist.html">
                     <i class="fa-sharp fa-light fa-heart"></i>
@@ -1495,7 +1495,7 @@
               <div class="product__item">
                 <div class="product__img">
                   <a class="product__img--link" href="shop-details.html">
-                    <img src="assets/img/products/product-1-4.png" alt="Product Image" class="product__img--main">
+                    <img src="{{asset('frontend/assets/img/products/product-1-4.png')}}" alt="Product Image" class="product__img--main">
                   </a>
                   <a class="product__wishlist" role="button" href="wishlist.html">
                     <i class="fa-sharp fa-light fa-heart"></i>
@@ -1544,7 +1544,7 @@
     <!-- Main Layouts End -->
     <!-- Footer Start -->
     <footer class="vs-footer vs-footer--style2 vs-footer--fixed wow animate__fadeInUp" data-wow-delay="0.65s">
-      <div class="vs-footer__widgets" data-bg-src="assets/img/bg/footer-bg-2.png">
+      <div class="vs-footer__widgets" data-bg-src="{{asset('frontend/assets/img/bg/footer-bg-2.png')}}">
         <div class="container">
           <div class="row justify-content-center position-relative">
             <div class="col-xl-auto">
@@ -1553,10 +1553,10 @@
                   <i class="fa-solid fa-caret-up"></i>
                   Back To Top
                 </a>
-                <img src="assets/img/svg/footer-logo-sep.svg" alt="sep" class="vs-footer__sep">
+                <img src="{{asset('frontend/assets/img/svg/footer-logo-sep.svg')}}" alt="sep" class="vs-footer__sep">
                 <div class="vs-footer__logo mb-20">
                   <a href="index.html">
-                    <img src="assets/img/logo.svg" alt="Roda Logo">
+                    <img src="{{asset('frontend/assets/img/logo.svg')}}" alt="Roda Logo">
                   </a>
                   <!-- Mobile Menu Toggle Button -->
                   <button class="menu-toggle active" id="menuToggle" aria-label="Toggle Menu">
@@ -1567,22 +1567,22 @@
                   <!-- Navigation Menu -->
                   <ul class="menu show" id="menu">
                     <li class="menu-item-has-children">
-                      <a class="vs-svg-assets" data-svg-assets="assets/img/svg/svg-menu-bottom-line.svg" href="index.html">HOME</a>
+                      <a class="vs-svg-assets" data-svg-assets="{{asset('frontend/assets/img/svg/svg-menu-bottom-line.svg')}}" href="index.html">HOME</a>
                     </li>
                     <li>
-                      <a class="vs-svg-assets" data-svg-assets="assets/img/svg/svg-menu-bottom-line.svg" href="about.html">About</a>
+                      <a class="vs-svg-assets" data-svg-assets="{{asset('frontend/assets/img/svg/svg-menu-bottom-line.svg')}}" href="about.html">About</a>
                     </li>
                     <li>
-                      <a class="vs-svg-assets" data-svg-assets="assets/img/svg/svg-menu-bottom-line.svg" href="service.html">Service</a>
+                      <a class="vs-svg-assets" data-svg-assets="{{asset('frontend/assets/img/svg/svg-menu-bottom-line.svg')}}" href="service.html">Service</a>
                     </li>
                     <li class="menu-item-has-children">
-                      <a class="vs-svg-assets" data-svg-assets="assets/img/svg/svg-menu-bottom-line.svg" href="shop.html">Shop</a>
+                      <a class="vs-svg-assets" data-svg-assets="{{asset('frontend/assets/img/svg/svg-menu-bottom-line.svg')}}" href="shop.html">Shop</a>
                     </li>
                     <li class="menu-item-has-children">
-                      <a class="vs-svg-assets" data-svg-assets="assets/img/svg/svg-menu-bottom-line.svg" href="blog.html">Blog</a>
+                      <a class="vs-svg-assets" data-svg-assets="{{asset('frontend/assets/img/svg/svg-menu-bottom-line.svg')}}" href="blog.html">Blog</a>
                     </li>
                     <li>
-                      <a class="vs-svg-assets" data-svg-assets="assets/img/svg/svg-menu-bottom-line.svg" href="contact.html">Contact</a>
+                      <a class="vs-svg-assets" data-svg-assets="{{asset('frontend/assets/img/svg/svg-menu-bottom-line.svg')}}" href="contact.html">Contact</a>
                     </li>
                   </ul>
                 </nav>
@@ -1651,35 +1651,35 @@
         All Js File
     ============================== -->
   <!-- Jquery -->
-  <script src="assets/js/vendor/jquery-7.1.1.slim.min.js"></script>
+  <script src="{{asset('frontend/assets/js/vendor/jquery-7.1.1.slim.min.js')}}"></script>
   <!-- Slick Slider -->
-  <script src="assets/js/slick.min.js"></script>
+  <script src="{{asset('frontend/assets/js/slick.min.js')}}"></script>
   <!-- Bootstrap -->
-  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="{{asset('frontend/assets/js/bootstrap.min.js')}}"></script>
   <!-- WOW.js Animation -->
-  <script src="assets/js/wow.min.js"></script>
+  <script src="{{asset('frontend/assets/js/wow.min.js')}}"></script>
   <!-- Magnific Popup -->
-  <script src="assets/js/jquery.magnific-popup.min.js"></script>
+  <script src="{{asset('frontend/assets/js/jquery.magnific-popup.min.js')}}"></script>
   <!-- Image Loaded -->
-  <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+  <script src="{{asset('frontend/assets/js/imagesloaded.pkgd.min.js')}}"></script>
   <!-- Isotope Filter -->
-  <script src="assets/js/isotope.pkgd.min.js"></script>
+  <script src="{{asset('frontend/assets/js/isotope.pkgd.min.js')}}"></script>
   <!-- Gsap -->
-  <script src="assets/js/gsap.min.js"></script>
+  <script src="{{asset('frontend/assets/js/gsap.min.js')}}"></script>
   <!-- ScrollTrigger -->
-  <script src="assets/js/ScrollTrigger.min.js"></script>
+  <script src="{{asset('frontend/assets/js/ScrollTrigger.min.js')}}"></script>
   <!-- Gsap ScrollTo Plugin -->
-  <script src="assets/js/gsap-scroll-to-plugin.js"></script>
+  <script src="{{asset('frontend/assets/js/gsap-scroll-to-plugin.js')}}"></script>
   <!-- Lenis Scroll -->
-  <script src="assets/js/lenis.min.js"></script>
+  <script src="{{asset('frontend/assets/js/lenis.min.js')}}"></script>
   <!-- Split Text -->
-  <script src="assets/js/SplitText.js"></script>
+  <script src="{{asset('frontend/assets/js/SplitText.js')}}"></script>
   <!-- Marquee -->
-  <script src="assets/js/marquee.js"></script>
+  <script src="{{asset('frontend/assets/js/marquee.js')}}"></script>
   <!-- Custom Cursor -->
-  <script src="assets/js/custom-cursor.js"></script>
+  <script src="{{asset('frontend/assets/js/custom-cursor.js')}}"></script>
   <!-- Main Js File -->
-  <script src="assets/js/main.js"></script>
+  <script src="{{asset('frontend/assets/js/main.js')}}"></script>
 </body>
 
 </html>

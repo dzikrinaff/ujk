@@ -26,10 +26,6 @@
             <input type="time" name="durasi" id="durasi" class="form-control" value="{{ old('durasi', $lagu->durasi) }}" required>
         </div>
 
-        <div class="mb-4">
-            <label for="lirik" class="form-label">Lirik</label>
-            <textarea name="lirik" id="lirik" class="form-control" rows="4" placeholder="Masukkan lirik lagu">{{ old('lirik', $lagu->lirik) }}</textarea>
-        </div>
 
         <div class="mb-4">
             <label for="yt_url" class="form-label">YouTube URL</label>

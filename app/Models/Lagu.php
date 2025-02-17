@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Lagu extends Model
 {
-    protected $fillable = ['album_id','judul','durasi','lirik','yt_url','spotify_url'];
-    protected $visible =['album_id','judul','durasi','lirik','yt_url','spotify_url'];
+    protected $fillable = ['album_id','judul','durasi','yt_url','spotify_url'];
+    protected $visible =['album_id','judul','durasi','yt_url','spotify_url'];
 
    
     public function album()

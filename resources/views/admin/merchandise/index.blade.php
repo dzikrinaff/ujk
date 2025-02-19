@@ -34,12 +34,13 @@
                         <td>{{ $item->stok }}</td>
                         <td>
                             @if($item->gambar_url)
-                                <img src="{{ asset('storage/'.$item->gambar_url) }}" width="50" height="50" alt="Gambar Merchandise">
+                                <img src="{{ asset('storage/'.$item->gambar_url) }}" width="100" height="100" class="img-thumbnail" alt="Gambar Merchandise">
                             @else
-                                -
+                                <span class="text-muted">Tidak ada gambar</span>
                             @endif
                         </td>
                         <td>
+                            <a href="{{ route('merchandise.show', $item->id) }}" class="btn btn-info btn-sm">Detail</a>
                             <a href="{{ route('merchandise.edit', $item->id) }}" class="btn btn-warning btn-sm">Edit</a>
                             <form action="{{ route('merchandise.destroy', $item->id) }}" method="POST" class="d-inline">
                                 @csrf

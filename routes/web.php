@@ -8,12 +8,11 @@ use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\LaguController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\MerchandiseController;
+use App\Http\Controllers\FrontController;
 use App\Http\Middleware\IsAdmin; // Tambahkan middleware di sini
 
 // Halaman utama
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
+Route::get('/', [FrontController::class, 'index'])->name('welcome');
 
 // Halaman Home (Hanya Bisa diakses jika login)
 Route::get('/home', function () {

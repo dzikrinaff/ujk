@@ -13,6 +13,8 @@ use App\Http\Middleware\IsAdmin; // Tambahkan middleware di sini
 
 // Halaman utama
 Route::get('/', [FrontController::class, 'index'])->name('welcome');
+Route::get('/events', [FrontController::class, 'events'])->name('events');
+
 
 // Halaman Home (Hanya Bisa diakses jika login)
 Route::get('/home', function () {

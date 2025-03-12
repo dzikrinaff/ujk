@@ -13,7 +13,9 @@ return new class extends Migration
     {
         Schema::create('events', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
+            $table->string('nama_event');
+            $table->string('lokasi'); // Lokasi event
+            $table->date('tanggal'); // Tanggal event
             $table->string('ticket_url')->nullable();
             $table->text('deskripsi')->nullable();
             $table->timestamps();

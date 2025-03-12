@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Models\Event;
@@ -20,8 +21,10 @@ class EventController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nama' => 'required|string|max:255',
-            'ticket_url' => 'required|url',
+            'nama_event' => 'required|string|max:255',
+            'lokasi' => 'required|string|max:255',
+            'tanggal' => 'required|date',
+            'ticket_url' => 'nullable|url',
             'deskripsi' => 'nullable|string',
         ]);
 
@@ -37,8 +40,10 @@ class EventController extends Controller
     public function update(Request $request, Event $event)
     {
         $request->validate([
-            'nama' => 'required|string|max:255',
-            'ticket_url' => 'required|url',
+            'nama_event' => 'required|string|max:255',
+            'lokasi' => 'required|string|max:255',
+            'tanggal' => 'required|date',
+            'ticket_url' => 'nullable|url',
             'deskripsi' => 'nullable|string',
         ]);
 

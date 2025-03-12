@@ -495,124 +495,154 @@ ol {
   Events
 -----------------------*/
 
-.section-title {
-    font-size: 28px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 20px;
-    position: relative;
+/* Section Title */
+/* Event Section */
+.event {
+    padding: 150px 0 40px; /* Tambahkan padding atas agar tidak menabrak navbar */
 }
 
-.section-title::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -5px;
-    width: 80px;
-    height: 3px;
-    background: rgba(225, 225, 225, 0.5);
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Section Title */
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #222;
 }
 
 /* Event Container */
 .event-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     gap: 20px;
-    flex-wrap: wrap;
 }
 
 /* Event Item */
 .event-item {
+    display: flex;
+    align-items: center;
     background: #fff;
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 3px 15px rgba(22, 41, 124, 0.1);
-    overflow: hidden;
-    text-align: center;
-    width: 300px;
-    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .event-item:hover {
-    transform: translateY(-5px);
-}
-
-/* Event Image */
-.event-item-pic {
-    position: relative;
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-}
-
-.event-item-pic img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
-}
-
-.event-item:hover .event-item-pic img {
-    transform: scale(1.1);
+    transform: scale(1.03);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 /* Event Date */
-.tag-date {
-    position: absolute;
-    left: 0;
-    bottom: 10px;
-    width: 100%;
+.event-date {
     text-align: center;
-}
-
-.tag-date span {
-    font-size: 15px;
-    color: #ffffff;
     background: #5c00ce;
-    display: inline-block;
-    padding: 8px 12px;
-    border-radius: 5px;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    margin-right: 15px;
+    font-weight: bold;
+    min-width: 65px;
 }
 
-/* Event Text */
-.event-item-text {
-    padding: 20px;
+.event-date .day {
+    font-size: 26px;
+    display: block;
 }
 
-.event-item-text h4 {
+.event-date .month {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+/* Event Details */
+.event-details {
+    flex-grow: 1;
+}
+
+.event-details h4 {
     font-size: 20px;
-    font-weight: 700;
-    color: #111111;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+    color: #333;
 }
 
-.event-item-text p {
-    color: #888888;
-    margin-bottom: 0;
+.event-details p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 6px;
 }
 
-.event-item-text p i {
+.event-details p i {
     color: #5c00ce;
     margin-right: 5px;
-    font-size: 16px;
 }
 
-/* Responsif */
+/* Deskripsi */
+.description {
+    font-size: 14px;
+    color: #444;
+    font-style: italic;
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+	background: linear-gradient(45deg, #ff0000, #0300b3);
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, #c30404, #007bff);
+}
+
+.btn-outline {
+    border: 1px solid #ff4b2b;
+    color: #ff4b2b;
+    background: white;
+}
+
+.btn-outline:hover {
+    background: #e4cbc6;
+    color: white;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-    .section-title::after {
-        width: 60px;
-    }
-
-    .event-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .event-item {
-        width: 90%;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
     }
 
+    .event-date {
+        min-width: 50px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
 }
+
+
 /*---------------------
   Track
 -----------------------*/

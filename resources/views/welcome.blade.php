@@ -22,53 +22,7 @@
 </section>
 <!-- Hero Section End -->
 
-<!-- Event Section Begin -->
-<section class="event">
-    <div class="container">
-        <div class="section-title">
-            <h2>Upcoming Events</h2>
-        </div>
-        <div class="event-container">
-            <div class="event-item">
-                <div class="event-item-pic">
-                    <img src="event-1.jpg" alt="Event 1">
-                    <div class="tag-date">
-                        <span>Dec 15, 2019</span>
-                    </div>
-                </div>
-                <div class="event-item-text">
-                    <h4>David Guetta Miami Ultra</h4>
-                    <p><i class="fa fa-map-marker"></i> Funkhaus Berlin, Berlin, Germany</p>
-                </div>
-            </div>
-            <div class="event-item">
-                <div class="event-item-pic">
-                    <img src="frontend/assets/img/shop/shop1.jpg" alt="Event 2">
-                    <div class="tag-date">
-                        <span>Dec 15, 2019</span>
-                    </div>
-                </div>
-                <div class="event-item-text">
-                    <h4>David Guetta Miami Ultra</h4>
-                    <p><i class="fa fa-map-marker"></i> Funkhaus Berlin, Berlin, Germany</p>
-                </div>
-            </div>
-            <div class="event-item">
-                <div class="event-item-pic">
-                    <img src="event-3.jpg" alt="Event 3">
-                    <div class="tag-date">
-                        <span>Dec 15, 2019</span>
-                    </div>
-                </div>
-                <div class="event-item-text">
-                    <h4>David Guetta Miami Ultra</h4>
-                    <p><i class="fa fa-map-marker"></i> Funkhaus Berlin, Berlin, Germany</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Event Section End -->
+
 
 <!-- About Section Begin -->
 <section class="about spad">
@@ -475,65 +429,7 @@
   </div>
 </section>
 <!-- Shop Section Begin -->
-<section class="shop spad">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section-title">
-                    <h2>Our Shop</h2>
-                    <h1>Featured Products</h1>
-                </div>
-            </div>
-        </div>
 
-        <div class="row">
-            <!-- Product 1 -->
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="shop__item">
-                    <div class="shop__item_pic">
-                        <img src="frontend/assets/img/shop/shop1.jpg" alt="Product 1">
-                        <div class="tag-new">NEW</div>
-                    </div>
-                    <div class="shop__item_text">
-                        <h4>Product Name 1</h4>
-                        <p>$50.00</p>
-                        <a href="#" class="primary-btn">Add to Cart</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 2 -->
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="shop__item">
-                    <div class="shop__item_pic">
-                        <img src="frontend/assets/img/shop/shop1.jpg" alt="Product 2">
-                        <div class="tag-sale">SALE</div>
-                    </div>
-                    <div class="shop__item_text">
-                        <h4>Product Name 22</h4>
-                        <p>$40.00 <span class="old-price">$60.00</span></p>
-                        <a href="#" class="primary-btn">Add to Cart</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 3 -->
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="shop__item">
-                    <div class="shop__item_pic">
-                        <img src="frontend/assets/img/shop/shop1.jpg" alt="Product 3">
-                        <div class="tag-new">NEW</div>
-                    </div>
-                    <div class="shop__item_text">
-                        <h4>Product Name 3</h4>
-                        <p>$70.00</p>
-                        <a href="#" class="primary-btn">Add to Cart</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 <!-- Shop Section End -->
 
 

@@ -39,7 +39,7 @@
             </div>
         </div>
         <div class="footer_copyright_text">
-            <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+            <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> by <a href="https://github.com/dzikrinaff" target="_blank">DzikriAnazmi🎸</a></p>
         </div>
     </div>
 </footer>

@@ -10,10 +10,10 @@
                 <div class="header__nav">
                     <nav class="header__menu mobile-menu">
                         <ul>
-                            <li class="active"><a href="./index.html">Home</a></li>
+                            <li class="active"><a href="{{ route('welcome') }}">Home</a></li>
                             <li><a href="./about.html">About</a></li>
                             <li><a href="./discography.html">Discography</a></li>
-                            <li><a href="./tours.html">Tours</a></li>
+                            <li><a href="{{ route('events') }}">Events</a></li>
                             <li><a href="./videos.html">Videos</a></li>
                             <li><a href="#">Pages</a>
                                 <ul class="dropdown">

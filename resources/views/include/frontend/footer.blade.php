@@ -1,4 +1,4 @@
-<footer class="footer spad set-bg" data-setbg="{{ asset('frontend/assets/img/footer-bg.png') }}" style="margin-top: 50px;">
+<footer class="footer spad set-bg" data-setbg="{{ asset('frontend/assets/img/') }}" style="margin-top: 50px;">
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-6">
@@ -21,10 +21,10 @@
                 <div class="footer__social">
                     <h2>DJoz</h2>
                     <div class="footer_social_links">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-instagram"></i></a>
-                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#" class="social-icon"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fa fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fa fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fa fa-dribbble"></i></a>
                     </div>
                 </div>
             </div>

@@ -33,19 +33,18 @@
                         <td>Rp {{ number_format($item->harga, 0, ',', '.') }}</td>
                         <td>{{ $item->stok }}</td>
                         <td>
-                            @if($item->gambar_url)
-                                <img src="{{ asset('storage/'.$item->gambar_url) }}" width="100" height="100" class="img-thumbnail" alt="Gambar Merchandise">
+                            @if($item->gambar)
+                                <img src="{{ asset('storage/'.$item->gambar) }}" width="100" class="img-thumbnail">
                             @else
                                 <span class="text-muted">Tidak ada gambar</span>
                             @endif
                         </td>
                         <td>
-                            <a href="{{ route('merchandise.show', $item->id) }}" class="btn btn-info btn-sm">Detail</a>
                             <a href="{{ route('merchandise.edit', $item->id) }}" class="btn btn-warning btn-sm">Edit</a>
                             <form action="{{ route('merchandise.destroy', $item->id) }}" method="POST" class="d-inline">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus merchandise ini?')">Hapus</button>
+                                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus merchandise ini?')">Hapus</button>
                             </form>
                         </td>
                     </tr>

@@ -105,6 +105,11 @@
             </a>
           </li>
           <li class="menu-item">
+            <a href="{{route('musisi.index')}}" class="menu-link">
+              <div data-i18n="Carousel">musisi</div>
+            </a>
+          </li>
+          <li class="menu-item">
             <a href="{{route('merchandise.index')}}" class="menu-link">
               <div data-i18n="Carousel">Merchandise</div>
             </a>

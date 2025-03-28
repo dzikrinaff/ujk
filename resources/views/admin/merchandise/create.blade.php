@@ -5,35 +5,22 @@
     <h1 class="h4 text-dark mb-4">Tambah Merchandise</h1>
     <form action="{{ route('merchandise.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
+        <label>Nama:</label>
+        <input type="text" name="nama" class="form-control mb-3" required>
         
-        <div class="mb-4">
-            <label for="nama" class="form-label">Nama Merchandise</label>
-            <input type="text" name="nama" id="nama" class="form-control" required placeholder="Masukkan nama merchandise">
-        </div>
+        <label>Deskripsi:</label>
+        <textarea name="deskripsi" class="form-control mb-3"></textarea>
 
-        <div class="mb-4">
-            <label for="deskripsi" class="form-label">Deskripsi</label>
-            <textarea name="deskripsi" id="deskripsi" class="form-control" rows="4" placeholder="Masukkan deskripsi merchandise"></textarea>
-        </div>
+        <label>Harga:</label>
+        <input type="number" name="harga" class="form-control mb-3" required>
 
-        <div class="mb-4">
-            <label for="harga" class="form-label">Harga</label>
-            <input type="number" name="harga" id="harga" class="form-control" required placeholder="Masukkan harga merchandise">
-        </div>
+        <label>Stok:</label>
+        <input type="number" name="stok" class="form-control mb-3" required>
 
-        <div class="mb-4">
-            <label for="stok" class="form-label">Stok</label>
-            <input type="number" name="stok" id="stok" class="form-control" required placeholder="Masukkan jumlah stok merchandise">
-        </div>
+        <label>Gambar:</label>
+        <input type="file" name="gambar" class="form-control mb-3">
 
-        <div class="mb-4">
-            <label for="gambar" class="form-label">Gambar</label>
-            <input type="file" name="gambar" id="gambar" class="form-control">
-        </div>
-
-        <div class="d-flex justify-content-end">
-            <button type="submit" class="btn btn-primary px-4 py-2">Simpan</button>
-        </div>
+        <button type="submit" class="btn btn-primary">Simpan</button>
     </form>
 </div>
 @endsection

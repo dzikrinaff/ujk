@@ -12,25 +12,15 @@
                         <ul>
                             <li class="active"><a href="{{ route('welcome') }}">Home</a></li>
                             <li><a href="./about.html">About</a></li>
-                            <li><a href="./discography.html">Discography</a></li>
+                            <li><a href="{{ route('musisi') }}">Personel</a></li>
                             <li><a href="{{ route('events') }}">Events</a></li>
                             <li><a href="./videos.html">Videos</a></li>
-                            <li><a href="#">Pages</a>
-                                <ul class="dropdown">
-                                    <li><a href="./about.html">About</a></li>
-                                    <li><a href="./blog.html">Blog</a></li>
-                                    <li><a href="./blog-details.html">Blog Details</a></li>
-                                </ul>
-                            </li>
+                            <li><a href="{{ route('merchandises.index') }}">Merch</a></li>
+                               
                             <li><a href="./contact.html">Contact</a></li>
                         </ul>
                     </nav>
-                    <div class="header_right_social">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-instagram"></i></a>
-                        <a href="#"><i class="fa fa-dribbble"></i></a>
-                    </div>
+                    
                 </div>
             </div>
         </div>

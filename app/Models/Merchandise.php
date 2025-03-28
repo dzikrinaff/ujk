@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Merchandise extends Model
 {
-    protected $fillable = ['nama','deskripsi','harga','stok','gambar_url'];
-    protected $visible = ['nama','deskripsi','harga','stok','gambar_url'];
+    protected $fillable = ['nama','deskripsi','harga','stok','gambar'];
+    protected $visible = ['nama','deskripsi','harga','stok','gambar'];
     
     public function pemesanan()
     {

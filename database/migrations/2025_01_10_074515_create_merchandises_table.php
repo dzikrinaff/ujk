@@ -17,7 +17,7 @@ return new class extends Migration
             $table->text('deskripsi')->nullable();
             $table->bigInteger('harga');
             $table->bigInteger('stok');
-            $table->string('gambar_url')->nullable();
+            $table->string('gambar')->nullable();
             $table->timestamps();
         });
     }

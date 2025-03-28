@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Models\Merchandise;
@@ -29,18 +28,14 @@ class MerchandiseController extends Controller
             'gambar' => 'nullable|image|mimes:jpg,png,jpeg|max:2048',
         ]);
 
-        // Simpan gambar jika ada
-        $gambar_url = null;
-        if ($request->hasFile('gambar')) {
-            $gambar_url = $request->file('gambar')->store('images', 'public');
-        }
+        $gambarPath = $request->file('gambar') ? $request->file('gambar')->store('images', 'public') : null;
 
         Merchandise::create([
             'nama' => $request->nama,
             'deskripsi' => $request->deskripsi,
             'harga' => $request->harga,
             'stok' => $request->stok,
-            'gambar_url' => $gambar_url,
+            'gambar' => $gambarPath,
         ]);
 
         return redirect()->route('merchandise.index')->with('success', 'Merchandise berhasil ditambahkan.');
@@ -66,16 +61,13 @@ class MerchandiseController extends Controller
             'gambar' => 'nullable|image|mimes:jpg,png,jpeg|max:2048',
         ]);
 
-        // Update gambar jika ada file baru yang diunggah
         if ($request->hasFile('gambar')) {
-            // Hapus gambar lama jika ada
-            if ($merchandise->gambar_url) {
-                Storage::disk('public')->delete($merchandise->gambar_url);
+            if ($merchandise->gambar) {
+                Storage::disk('public')->delete($merchandise->gambar);
             }
-
-            $gambar_url = $request->file('gambar')->store('images', 'public');
+            $gambarPath = $request->file('gambar')->store('images', 'public');
         } else {
-            $gambar_url = $merchandise->gambar_url;
+            $gambarPath = $merchandise->gambar;
         }
 
         $merchandise->update([
@@ -83,7 +75,7 @@ class MerchandiseController extends Controller
             'deskripsi' => $request->deskripsi,
             'harga' => $request->harga,
             'stok' => $request->stok,
-            'gambar_url' => $gambar_url,
+            'gambar' => $gambarPath,
         ]);
 
         return redirect()->route('merchandise.index')->with('success', 'Merchandise berhasil diperbarui.');
@@ -91,9 +83,8 @@ class MerchandiseController extends Controller
 
     public function destroy(Merchandise $merchandise)
     {
-        // Hapus gambar jika ada
-        if ($merchandise->gambar_url) {
-            Storage::disk('public')->delete($merchandise->gambar_url);
+        if ($merchandise->gambar) {
+            Storage::disk('public')->delete($merchandise->gambar);
         }
 
         $merchandise->delete();

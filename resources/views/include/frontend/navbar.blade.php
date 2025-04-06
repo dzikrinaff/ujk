@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-lg-2 col-md-2">
                 <div class="header__logo">
-                    <a href="./index.html"><img src="{{ asset('frontend/assets/img/logo.png') }}" alt=""></a>
+                    <a href="./index.html"><img src="{{ asset('frontend/assets/img/perunggu_modified.png') }}" alt="Logo"></a>
                 </div>
             </div>
             <div class="col-lg-10 col-md-10">
@@ -14,7 +14,7 @@
                             <li><a href="./about.html">About</a></li>
                             <li><a href="{{ route('musisi') }}">Personel</a></li>
                             <li><a href="{{ route('events') }}">Events</a></li>
-                            <li><a href="./videos.html">Videos</a></li>
+                            <li><a href="{{ route('videos') }}">Videos</a></li>
                             <li><a href="{{ route('merchandises.index') }}">Merch</a></li>
                                
                             <li><a href="./contact.html">Contact</a></li>

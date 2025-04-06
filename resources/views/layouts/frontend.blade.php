@@ -22,6 +22,10 @@
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/owl.carousel.min.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/slicknav.min.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/style.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/albums.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ url('frontend/assets/css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     
 </head>
 

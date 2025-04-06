@@ -52,13 +52,10 @@ Route::middleware(['auth'])->group(function () {
 Route::get('/', [FrontController::class, 'index'])->name('welcome');
 Route::get('/events', [FrontController::class, 'events'])->name('events');
 Route::get('/musisi', [FrontController::class, 'musisi'])->name('musisi');
+Route::get('/album', [FrontController::class, 'albums'])->name('albums');
+Route::get('/video', [FrontController::class, 'videos'])->name('videos');
 Route::get('/merchandises', [FrontController::class, 'merchandises'])->name('merchandises.index');
 Route::get('/merchandises/{id}', [FrontController::class, 'showMerchandise'])->name('merchandises.show');
 
-// Route untuk menambahkan merchandise ke keranjang
-Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
-Route::post('/cart/add/{id}', [CartController::class, 'addToCart'])->name('cart.add');
-Route::post('/cart/update/{id}', [CartController::class, 'updateCart'])->name('cart.update');
-Route::post('/cart/remove/{id}', [CartController::class, 'removeFromCart'])->name('cart.remove');
-Route::post('/cart/clear', [CartController::class, 'clearCart'])->name('cart.clear');
+
 Auth::routes();

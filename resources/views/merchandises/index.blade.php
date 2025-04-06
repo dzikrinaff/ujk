@@ -2,7 +2,9 @@
 
 @section('content')
 <div class="container py-5">
-    <h1 class="text-center mb-4 text-uppercase fw-bold">Merchandise Kami</h1>
+    <div class="section-title" style="margin-top: 70px;">
+        <h2>Merchandise Kami</h2>
+    </div>
     <div class="row">
         @foreach($merchandises as $merchandise)
         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">

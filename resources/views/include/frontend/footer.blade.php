@@ -19,13 +19,15 @@
             </div>
             <div class="col-lg-4 offset-lg-1 col-md-6">
                 <div class="footer__social">
-                    <h2>DJoz</h2>
+                    <h2>Sosial Media Kami</h2>
                     <div class="footer_social_links">
-                        <a href="#" class="social-icon"><i class="fa fa-facebook"></i></a>
-                        <a href="#" class="social-icon"><i class="fa fa-twitter"></i></a>
-                        <a href="#" class="social-icon"><i class="fa fa-instagram"></i></a>
-                        <a href="#" class="social-icon"><i class="fa fa-dribbble"></i></a>
+                        <a href="https://www.tiktok.com/@perunggu_" class="social-icon"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://twitter.com/perunggu_" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/perunggu_/" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/c/PerungguOfficial" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
                     </div>
+    
+                      
                 </div>
             </div>
             <div class="col-lg-3 offset-lg-1 col-md-6">

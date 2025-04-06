@@ -1,0 +1,115 @@
+
+
+/* Albums Grid */
+.albums-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.album-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.album-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.album-cover {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.album-cover img {
+    width: 100%;  /* Gambar menyesuaikan lebar div */
+    height: 200px; /* Sesuai ukuran sebelumnya */
+    object-fit: cover; /* Menyesuaikan tanpa merusak proporsi */
+    border-radius: 12px 12px 0 0; /* Jika ingin sudut melengkung di atas */
+}
+
+.album-cover .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.album-cover:hover .overlay {
+    opacity: 1;
+}
+
+.play-icon {
+    color: white;
+    font-size: 3rem;
+}
+
+.album-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.album-judul {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--dark);
+}
+
+.album-tanggal-rilis {
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.album-tanggal-rilis i {
+    margin-right: 5px;
+    font-size: 0.9rem;
+}
+
+.album-deskripsi {
+    color: var(--gray);
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.btn-detail {
+    display: inline-block;
+    padding: 8px 15px;
+    background: var(--primary);
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.btn-detail:hover {
+    background: var(--secondary);
+}
+    
+/* Responsive */
+@media (max-width: 768px) {
+    .albums-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}

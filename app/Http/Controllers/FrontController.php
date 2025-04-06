@@ -15,9 +15,8 @@ class FrontController extends Controller
      */
     public function index()
     {
-        $albums = Album::all(); // Ambil semua data album
         $merchandises = Merchandise::paginate(10); // Ambil data merchandise dengan pagination
-        return view('welcome', compact('albums', 'merchandises'));
+        return view('welcome', compact( 'merchandises'));
     }
 
     /**
@@ -32,6 +31,15 @@ class FrontController extends Controller
     {
         $musisis = Musisi::all();
         return view('musisi', compact('musisis'));
+    }
+    public function albums()
+    {
+        $albums = Album::all(); // Menggunakan pagination agar tidak terlalu panjang
+        return view('albums', compact('albums'));
+    }
+    public function videos()
+    {
+        return view('video');
     }
     /**
      * Menampilkan detail event berdasarkan ID.

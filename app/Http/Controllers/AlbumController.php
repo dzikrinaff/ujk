@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Album;
+use App\Models\lagu;
 use Illuminate\Http\Request;
 
 class AlbumController extends Controller

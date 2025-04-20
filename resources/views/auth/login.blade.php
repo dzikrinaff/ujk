@@ -74,7 +74,7 @@
           <div class="card">
             <div class="card-body">
               <!-- Logo -->
-              <div class="app-brand justify-content-center">
+              {{-- <div class="app-brand justify-content-center">
                 <a href="index.html" class="app-brand-link gap-2">
                   <span class="app-brand-logo demo">
                     <svg
@@ -133,7 +133,7 @@
                   </span>
                   <span class="app-brand-text demo text-body fw-bolder">Sneat</span>
                 </a>
-              </div>
+              </div> --}}
               <!-- /Logo -->
               <h4 class="mb-2">Selamat datang di halaman login! 👋</h4>
               <p class="mb-4">Silakan masuk ke akun Anda</p>

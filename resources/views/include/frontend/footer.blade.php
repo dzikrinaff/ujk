@@ -6,13 +6,13 @@
                     <ul>
                         <li>
                             <i class="fa fa-phone"></i>
-                            <p>Phone</p>
-                            <h6>1-677-124-44227</h6>
+                            <p>KontaK</p>
+                            <h6>085722476113</h6>
                         </li>
                         <li>
                             <i class="fa fa-envelope"></i>
                             <p>Email</p>
-                            <h6>DJ.Music@gmail.com</h6>
+                            <h6>PerungguOfficial@gmail.com</h6>
                         </li>
                     </ul>
                 </div>

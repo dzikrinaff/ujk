@@ -1,89 +1,86 @@
 <?php
+
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Cart;
 use App\Models\Merchandise;
-use Illuminate\Support\Facades\Session;
+use App\Models\Pemesanan;
+use App\Models\PemesananItem;
+use App\Models\Pembayaran;
+use App\Http\Controllers\MidtransController;
+use App\Http\Controllers\CheckoutController;
+
+use Illuminate\Http\Request;
 
 class CartController extends Controller
 {
-    /**
-     * Menampilkan isi keranjang belanja.
-     */
+    // Menampilkan isi keranjang
     public function index()
     {
-        $cart = session()->get('cart', []);
-        return view('cart.index', compact('cart'));
+        $carts = Cart::with('merchandise')
+            ->where('user_id', auth()->id())
+            ->get();
+
+        $total = $carts->sum(function ($cart) {
+            return $cart->merchandise->harga * $cart->quantity;
+        });
+
+        return view('cart.index', compact('carts', 'total'));
     }
 
-    /**
-     * Menambahkan item ke keranjang.
-     */
-    public function addToCart(Request $request, $id)
+    // Menambahkan item ke dalam keranjang
+    public function store(Request $request, $id)
     {
-        $merchandise = Merchandise::find($id);
+        $merchandise = Merchandise::findOrFail($id);
 
-        if (!$merchandise) {
-            return redirect()->back()->with('error', 'Merchandise tidak ditemukan!');
+        // Cek apakah stok cukup
+        if ($merchandise->stok < 1) {
+            return back()->with('error', 'Stok barang tidak mencukupi');
         }
 
-        // Ambil data keranjang dari session
-        $cart = session()->get('cart', []);
+        $cart = Cart::where('user_id', auth()->id())
+            ->where('merchandise_id', $id)
+            ->first();
 
-        // Jika sudah ada di keranjang, tambahkan jumlahnya
-        if (isset($cart[$id])) {
-            $cart[$id]['quantity']++;
+        if ($cart) {
+            // Jika item sudah ada, tambah quantity
+            $cart->increment('quantity');
         } else {
-            $cart[$id] = [
-                "nama" => $merchandise->nama,
-                "harga" => $merchandise->harga,
-                "gambar" => $merchandise->gambar,
-                "quantity" => 1
-            ];
+            // Jika item belum ada, buat item baru
+            Cart::create([
+                'user_id' => auth()->id(),
+                'merchandise_id' => $id,
+                'quantity' => 1
+            ]);
         }
 
-        session()->put('cart', $cart);
-        return redirect()->back()->with('success', 'Merchandise ditambahkan ke keranjang!');
+        return redirect()->route('cart.index')->with('success', 'Item ditambahkan ke keranjang');
     }
 
-    /**
-     * Mengupdate jumlah item di keranjang.
-     */
-    public function updateCart(Request $request, $id)
+    // Mengupdate jumlah item di keranjang
+    public function update(Request $request, $id)
     {
-        $cart = session()->get('cart', []);
-
-        if (isset($cart[$id])) {
-            $cart[$id]['quantity'] = $request->quantity;
-            session()->put('cart', $cart);
-            return redirect()->back()->with('success', 'Keranjang diperbarui!');
+        $cart = Cart::findOrFail($id);
+    
+        // Pastikan yang edit adalah pemilik cart
+        if ($cart->user_id !== auth()->id()) {
+            abort(403);
         }
-
-        return redirect()->back()->with('error', 'Item tidak ditemukan di keranjang!');
+    
+        $requestedQty = (int) $request->quantity;
+        $stok = $cart->merchandise->stok;
+    
+        // Validasi agar tidak bisa kurang dari 1 dan tidak lebih dari stok
+        $cart->quantity = max(1, min($requestedQty, $stok));
+        $cart->save();
+    
+        return redirect()->route('cart.index')->with('success', 'Keranjang Berhasil Diubah .');
     }
-
-    /**
-     * Menghapus item dari keranjang.
-     */
-    public function removeFromCart($id)
+    
+    // Menghapus item dari keranjang
+    public function destroy(Cart $cart)
     {
-        $cart = session()->get('cart', []);
-
-        if (isset($cart[$id])) {
-            unset($cart[$id]);
-            session()->put('cart', $cart);
-            return redirect()->back()->with('success', 'Item dihapus dari keranjang!');
-        }
-
-        return redirect()->back()->with('error', 'Item tidak ditemukan di keranjang!');
-    }
-
-    /**
-     * Mengosongkan seluruh isi keranjang.
-     */
-    public function clearCart()
-    {
-        session()->forget('cart');
-        return redirect()->back()->with('success', 'Keranjang dikosongkan!');
+        $cart->delete();
+        return back()->with('success', 'Barang dikeluarkan dari keranjang');
     }
 }

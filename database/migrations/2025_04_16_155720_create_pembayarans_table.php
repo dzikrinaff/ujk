@@ -13,13 +13,16 @@ return new class extends Migration
     {
         Schema::create('pembayarans', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('pemesanan_id')->constrained('pemesanans')->onDelete('cascade');
-            $table->timestamp('tanggal_order');
-            $table->decimal('total_pembayaran', 15, 2);
+            $table->foreignId('pemesanan_id')->constrained()->onDelete('cascade');
+            $table->dateTime('tanggal_order');
+            $table->integer('total_pembayaran');
             $table->string('payment_type');
-            $table->enum('payment_status', ['pending', 'berhasil', 'gagal']);
+            $table->string('payment_status');
+            $table->string('transaction_id')->unique();
+            $table->string('fraud_status');
             $table->timestamps();
         });
+        
     }
 
     /**

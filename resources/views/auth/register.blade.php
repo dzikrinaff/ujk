@@ -74,7 +74,7 @@
           <div class="card">
             <div class="card-body">
               <!-- Logo -->
-              <div class="app-brand justify-content-center">
+              {{-- <div class="app-brand justify-content-center">
                 <a href="index.html" class="app-brand-link gap-2">
                   <span class="app-brand-logo demo">
                     <svg
@@ -133,10 +133,10 @@
                   </span>
                   <span class="app-brand-text demo text-body fw-bolder">Sneat</span>
                 </a>
-              </div>
+              </div> --}}
               <!-- /Logo -->
-              {{-- <h4 class="mb-2">Adventure starts here 🚀</h4>
-              <p class="mb-4">Make your app management easy and fun!</p> --}}
+              <h4 class="mb-2">Daftar Jika Belum Punya Akun</h4>
+              <p class="mb-4">Isi form berikut:</p>
 
               <form method="POST" action="{{ url('/register') }}">
                 @csrf

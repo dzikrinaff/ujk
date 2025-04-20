@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+{{-- @extends('layouts.admin')
 
 @section('content')
 <div class="container-xxl flex-grow-1 container-p-y">
@@ -8,7 +8,7 @@
           <div class="d-flex align-items-end row">
             <div class="col-sm-7">
               <div class="card-body">
-                <h5 class="card-title text-primary">Congratulations John! 🎉</h5>
+                <h5 class="card-title text-primary">Congratulations anjing! 🎉</h5>
                 <p class="mb-4">
                   You have done <span class="fw-bold">72%</span> more sales today. Check your new badge in
                   your profile.
@@ -255,7 +255,7 @@
         <div class="card h-100">
           <div class="card-header d-flex align-items-center justify-content-between pb-0">
             <div class="card-title mb-0">
-              <h5 class="m-0 me-2">Order Statistics</h5>
+              <h5 class=" m-0 me-2">Order Statistics</h5>
               <small class="text-muted">42.82k Total Sales</small>
             </div>
             <div class="dropdown">
@@ -1409,4 +1409,4 @@
       <!--/ Data Tables -->
     </div>
   </div>
-@endsection
+@endsection --}}

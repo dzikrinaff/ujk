@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Album;
+use App\Models\lagu;
 use App\Models\Event;
 use App\Models\Merchandise;
 use App\Models\Musisi;
@@ -18,25 +19,65 @@ class FrontController extends Controller
         $merchandises = Merchandise::paginate(10); // Ambil data merchandise dengan pagination
         return view('welcome', compact( 'merchandises'));
     }
+  // Merchandise List
+  public function merchandises()
+  {
+      $merchandises = Merchandise::latest()->get();
+      return view('merchandise.index', compact('merchandises'));
+  }
 
-    /**
-     * Menampilkan daftar event.
-     */
-    public function events()
-    {
-        $events = Event::all(); // Ambil semua data event
-        return view('events', compact('events'));
+  public function showMerchandise($id)
+  {
+      $merchandise = Merchandise::findOrFail($id);
+      return view('merchandise.show', compact('merchandise'));
+  }
+
+// Cart Show
+public function showCart()
+{
+    $cart = session()->get('cart', []); // kasih default array biar ga error kalo kosong
+    return view('cart.index', compact('cart'));
+}
+
+
+// Cart Add
+public function addToCart($id)
+{
+    $merchandise = Merchandise::findOrFail($id);
+    $cart = session()->get('cart', []);
+
+    if (isset($cart[$id])) {
+        $cart[$id]['quantity']++;
+    } else {
+        $cart[$id] = [
+            'nama' => $merchandise->nama,
+            'harga' => $merchandise->harga,
+            'gambar_url' => $merchandise->gambar,
+            'quantity' => 1
+        ];
     }
-    public function musisi()
-    {
-        $musisis = Musisi::all();
-        return view('musisi', compact('musisis'));
+
+    session()->put('cart', $cart);
+    return redirect()->route('cart.index')->with('success', 'Berhasil tambah ke keranjang!');
+}
+
+// Cart Remove
+public function removeFromCart($id)
+{
+    $cart = session()->get('cart', []);
+    if (isset($cart[$id])) {
+        unset($cart[$id]);
+        session()->put('cart', $cart);
     }
-    public function albums()
-    {
-        $albums = Album::all(); // Menggunakan pagination agar tidak terlalu panjang
-        return view('albums', compact('albums'));
-    }
+    return redirect()->route('cart.index')->with('success', 'Item berhasil dihapus!');
+}
+
+// Checkout View
+public function checkout()
+{
+    return view('cart.checkout');
+}
+
     public function videos()
     {
         return view('video');
@@ -49,22 +90,29 @@ class FrontController extends Controller
         $event = Event::findOrFail($id); // Ambil data event berdasarkan ID
         return view('events.show', compact('event'));
     }
-    
-    /**
-     * Menampilkan daftar merchandise.
-     */
-    public function merchandises()
+    public function musisi()
     {
-        $merchandises = Merchandise::paginate(10); // Ambil data merchandise dengan pagination
-        return view('merchandises.index', compact('merchandises'));
+        $musisis = Musisi::all();
+        return view('musisi', compact('musisis'));
+    }
+    public function albums()
+    {
+        $albums = Album::all(); // Menggunakan pagination agar tidak terlalu panjang
+        return view('album.index', compact('albums'));
+    }
+    public function detailAlbum($id)
+    {
+    $album = Album::findOrFail($id); // ambil album berdasarkan id
+    return view('album.detail', compact('album'));
+    }
+    public function events()
+    {
+        $events = Event::all(); // Ambil semua data event
+        return view('events', compact('events'));
     }
 
     /**
-     * Menampilkan detail merchandise berdasarkan ID.
+     * Menampilkan daftar merchandise.
      */
-    public function showMerchandise($id)
-    {
-        $merchandise = Merchandise::findOrFail($id); // Ambil data merchandise berdasarkan ID
-        return view('merchandises.show', compact('merchandise'));
-    }
+
 }

@@ -150,5 +150,12 @@
         autohidemode: false,
         horizrailenabled: false
     });
+    const menuItems = document.querySelectorAll('.header__menu ul li a');
 
+    menuItems.forEach(link => {
+        if(link.href === window.location.href){
+            link.parentElement.classList.add('active');
+        }
+    });
+    
 })(jQuery);

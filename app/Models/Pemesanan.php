@@ -2,25 +2,42 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Pemesanan extends Model
 {
-    protected $fillable = ['user_id','telpon','alamat','merchandise_id','quantity','total_harga','status'];
-    protected $visible = ['user_id','telpon','alamat','merchandise_id','quantity','total_harga','status'];
-  
+    use HasFactory;
+
+    protected $fillable = [
+        'order_id',
+        'user_id',
+        'telpon',
+        'alamat',
+        'total_harga',
+        'status',
+        'snap_token',
+    ];
+
+    public function items()
+    {
+        return $this->hasMany(PemesananItem::class);
+    }
+
+    /**
+     * Relasi ke pembayaran
+     */
+    public function pembayaran()
+    {
+        return $this->hasOne(Pembayaran::class);
+    }
+
+    /**
+     * Relasi ke user
+     */
     public function user()
     {
         return $this->belongsTo(User::class);
     }
 
-    public function merchandise()
-    {
-        return $this->belongsTo(Merchandise::class);
-    }
-
-    public function pembayaran()
-    {
-        return $this->hasOne(Pembayaran::class);
-    }
-}
+   }

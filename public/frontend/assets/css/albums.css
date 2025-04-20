@@ -1,115 +1,128 @@
+.album-section {
+    padding: 60px 0;
+}
 
-
-/* Albums Grid */
 .albums-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 25px;
-    margin-bottom: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
 }
 
 .album-card {
-    background: white;
+    background: #111;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    transition: 0.4s ease;
+    border: 1px solid #333;
 }
 
 .album-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-6px);
+    border-color: #828282;  
 }
 
-.album-cover {
-    height: 220px;
-    background-size: cover;
-    background-position: center;
+.album-image {
     position: relative;
 }
-.album-cover img {
-    width: 100%;  /* Gambar menyesuaikan lebar div */
-    height: 200px; /* Sesuai ukuran sebelumnya */
-    object-fit: cover; /* Menyesuaikan tanpa merusak proporsi */
-    border-radius: 12px 12px 0 0; /* Jika ingin sudut melengkung di atas */
+
+.album-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.album-detail img {
+    margin-top: 30px;
 }
 
-.album-cover .overlay {
+.album-year {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    top: 10px;
+    left: 10px;
+    background: #737373;
+    color: #fff;
+    font-size: 14px;
+    padding: 3px 8px;
+    border-radius: 4px;
 }
 
-.album-cover:hover .overlay {
-    opacity: 1;
-}
-
-.play-icon {
-    color: white;
-    font-size: 3rem;
-}
-
-.album-info {
+.album-content {
     padding: 20px;
-    text-align: center;
+    color: #fff;
 }
 
-.album-judul {
-    font-size: 1.4rem;
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: var(--dark);
-}
-
-.album-tanggal-rilis {
-    color: var(--gray);
-    font-size: 0.9rem;
-    margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.album-tanggal-rilis i {
-    margin-right: 5px;
-    font-size: 0.9rem;
-}
-
-.album-deskripsi {
-    color: var(--gray);
-    font-size: 0.95rem;
+.album-title {
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.5);
+    border-bottom: 2px solid #ff0101dc;
+    display: inline-block;
+    padding-bottom: 5px;
     margin-bottom: 15px;
 }
 
-.btn-detail {
+
+.album-desc {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+.album-subtitle {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: #000000; /* Dark blue-gray for better readability */
+    margin-top: 80px;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1); /* Subtle text shadow */
+}
+
+.album-action a {
     display: inline-block;
-    padding: 8px 15px;
-    background: var(--primary);
-    color: white;
-    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.custom-btn {
+    background-color: #616161; /* Pleasant blue */
+    color: #fff;
+    border-radius: 50px;
+    padding: 12px 35px; /* Slightly larger padding */
+    transition: all 0.3s ease;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.custom-btn:hover {
+    background-color: #575757; /* Slightly darker blue on hover */
+    transform: scale(1.05);
+    color: #ffffff;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
     text-decoration: none;
-    transition: background 0.3s ease;
 }
 
-.btn-detail:hover {
-    background: var(--secondary);
+/* Additional styling for the date text */
+.date-text {
+    font-family: 'Playfair Display', serif;
+    color: #7f8c8d; /* Gray color for date */
+    text-align: center;
+    margin: 15px 0;
+    font-size: 18px;
 }
-    
-/* Responsive */
-@media (max-width: 768px) {
-    .albums-grid {
-        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    }
 
-    h1 {
-        font-size: 2rem;
-    }
+/* Styling for the number */
+.number-display {
+    font-size: 72px;
+    color: #3498db; /* Matching the button color */
+    text-align: center;
+    font-weight: 700;
+    margin: 20px 0;
+}
+.album-footer {
+    font-size: 13px;
+    color: #ffffff;
 }
